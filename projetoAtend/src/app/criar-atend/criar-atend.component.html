@@ -1,0 +1,35 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Solicitar Atendimento </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Coordenador</label>
+            <input type="text" class ="form-control" id = "coordenador"
+                [(ngModel)] = "atendimento.coordenador" name = "coordenador">
+        </div>
+    
+        <div class="form-group">
+            <label> Assunto</label>
+            <input type="text" class ="form-control" id = "assunto"
+                [(ngModel)] = "atendimento.assunto" name = "assunto">
+        </div>
+    
+        <div class="form-group">
+            <label> Descrição</label>
+            <input type="text" class ="form-control" id = "descricao"
+                [(ngModel)] = "atendimento.descricao" name = "descricao">
+        </div>
+        
+        <div class="form-group">
+            <label> Data</label>
+            <input type="text" class ="form-control" id = "data"
+                [(ngModel)] = "atendimento.data" name = "data">
+        </div>
+
+
+
+        <button class = "btn btn-success" type ="submit">Salvar</button>
+        <button type="reset" class="btn btn-secondary btn-add-atend" style="margin-left: 10px">Cancelar</button>
+    
+    </form>
+    </div> 

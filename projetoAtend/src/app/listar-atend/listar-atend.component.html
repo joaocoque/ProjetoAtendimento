@@ -1,0 +1,24 @@
+<h2> Lista de Atendimentos</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Coordenador</th>
+            <th> Assunto </th>
+            <th> Descrição</th>
+            <th> Data </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let atendimento of atendimentos" >
+            <td> {{ atendimento.coordenador }} </td>
+            <td> {{ atendimento.assunto }} </td>
+            <td> {{ atendimento.descricao }} </td>
+            <td> {{ atendimento.data }} </td>
+            <td>
+                <button (click) = "updateAtendimento(atendimento.id)" class = "btn btn-info"> Atualizar</button>
+                <button (click) = "deleteAtendimento(atendimento.id)" class = "btn btn-danger" style="margin-left: 10px"> Excluir</button>
+                <button (click) = "atendimentoDetails(atendimento.id)" class = "btn btn-info" style="margin-left: 10px"> Detalhes</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
